@@ -4,7 +4,7 @@ import ReactMarkdown from 'react-markdown';
 import './App.css';
 
 export default function App() {
-  const [markdown, setMarkdown] = useState('# suppppp');
+  const [markdown, setMarkdown] = useState('# Render markdown here');
 
   function handleChange(e) {
     setMarkdown(e.target.value);
@@ -13,7 +13,7 @@ export default function App() {
   return (
     <div className="app">
       <textarea onChange={handleChange} value={markdown} />
-
+      {/* we can use two following ways to create markdown component */}
       {/* <div
         className="preview"
         dangerouslySetInnerHTML={{ __html: marked(markdown) }}
